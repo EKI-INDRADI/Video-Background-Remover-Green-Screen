@@ -13,11 +13,30 @@ import random
 from PIL import Image
 import moviepy.editor as moviepy
 
-bgrm = BriaRMBG.from_pretrained("briaai/RMBG-1.4")
+# LINUX
+# https://huggingface.co/briaai/RMBG-1.4
+# bgrm = BriaRMBG.from_pretrained("briaai/RMBG-1.4")
+# # bgrm = BriaRMBG.from_pretrained("briaai/RMBG-1.4",force_download=True)
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-#device = "cpu"
-bgrm.to(device)
+# device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+# #device = "cpu"
+# bgrm.to(device)
+
+
+# WINDOWS 
+from huggingface_hub import hf_hub_download
+# Load the RMBG model
+bgrm = BriaRMBG()
+model_path = hf_hub_download("briaai/RMBG-1.4", 'model.pth')
+if torch.cuda.is_available():
+    print("CUDA is available. Using GPU.")
+    print(f"GPU: {torch.cuda.get_device_name(0)}")
+    bgrm.load_state_dict(torch.load(model_path))
+    bgrm = bgrm.cuda()
+else:
+    print("CUDA is not available. Using CPU.")
+    bgrm.load_state_dict(torch.load(model_path, map_location="cpu"))
+bgrm.eval()
 
 
 def resize_image(image):

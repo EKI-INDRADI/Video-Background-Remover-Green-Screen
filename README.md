@@ -1,3 +1,29 @@
+# tested 20240630
+
+```sh
+git clone https://github.com/EKI-INDRADI/Video-Background-Remover-Green-Screen
+cd Video-Background-Remover-Green-Screen
+
+conda create -n greenscreen_20240511 python=3.10
+conda activate greenscreen_20240511
+
+pip install -r requirements.txt
+pip install huggingface-hub opencv-python pillow numpy
+pip install gradio
+pip install moviepy
+pip install skimage
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+```
+
+# result tested 20240630
+
+
+
+
+
+
+
 # Video-Background-Remover-Green-Screen
 Removes your video background and adds green screen Using the briaai/RMBG-1.4 from HuggingFace 
 # Methodology
