@@ -18,11 +18,9 @@ pip install torch torchvision torchaudio --index-url https://download.pytorch.or
 
 # result tested 20240630
 
+https://github.com/EKI-INDRADI/Video-Background-Remover-Green-Screen/assets/47073420/b3c61e72-9e17-40a1-8353-65bfb763a192
 
-
-
-
-
+https://github.com/EKI-INDRADI/Video-Background-Remover-Green-Screen/assets/47073420/6acfa9a3-707c-4bcc-bb4d-3e6ed62e43cc
 
 # Video-Background-Remover-Green-Screen
 Removes your video background and adds green screen Using the briaai/RMBG-1.4 from HuggingFace 
