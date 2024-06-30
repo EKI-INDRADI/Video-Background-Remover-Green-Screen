@@ -1,4 +1,4 @@
-# tested 20240630
+# tested 20240630 for windows 10 x64
 
 ```sh
 git clone https://github.com/EKI-INDRADI/Video-Background-Remover-Green-Screen
@@ -13,6 +13,8 @@ pip install gradio
 pip install moviepy
 pip install skimage
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+python app.py
 
 ```
 
